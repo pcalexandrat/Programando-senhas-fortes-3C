@@ -1,7 +1,7 @@
-const campoSenha = document.querySelector('#campo-senha');
+const numeroSenha = document.querySelector('#campo-senha');
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVXYWZ';
 geraSenha();
-campoSenha.value = letrasMaiusculas;
+numeroSenha.value = letrasMaiusculas;
 
 function diminuiTamanho(){
     if (tamanhoSenha > 1){
@@ -26,5 +26,5 @@ function geraSenha() {
         numeroAleatorio = Math.floor(numeroAleatorio);
         senha = senha + letrasMaiusculas[numeroAleatorio];
     }
-    campoSenha.value = senha;
+    numeroSenha.value = senha;
 }
