@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
-:root{
-    --branco: white;    
+:root {
+    --branco: white;
     --cor-de-fundo: #00162E;
     --fundo-senha: #00244D;
     --fundo-texto: #001E40;
@@ -10,16 +10,15 @@
     --roboto-mono: 'Roboto Mono', monospace;
 }
 
-*{
+* {
     font-weight: 400;
 }
 
-body{
+body {
     color: var(--branco);
     background-color: var(--cor-de-fundo);
     font-family: var(--roboto);
 }
-
 
 .titulo-principal {
     font-family: var(--roboto-mono);
@@ -60,7 +59,6 @@ body{
     margin: 0 auto;
 }
 
-
 .parametro {
     background-color: var(--fundo-texto);
     border: 2px solid var(--borda);
@@ -88,65 +86,73 @@ body{
     margin: 0 auto;
 }
 
-
-.parametro-senha-botoes{
+.parametro-senha-botoes {
     display: flex;
     justify-content: center;
 }
 
-
-.parametro-senha__texto{
-display: flex;
-justify-content: space-between;
-padding: 24px;
-border-top: 2px solid var(--borda);
-border-bottom: 2px solid var(--borda);
-margin: 0;
-font-size: 24px;
+.parametro-senha__botao {
+    background-color: var(--fundo-texto);
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 24px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.parametro-senha__botao{
-background-color: var(--fundo-texto);
-color: var(--branco);
-border: 2px solid var(--borda);
-padding: 24px;
-font-size: 24px;
-cursor: pointer;
+.parametro-senha__texto {
+    padding: 24px;
+    border-top: 2px solid var(--borda);
+    border-bottom: 2px solid var(--borda);
+    margin: 0;
+    font-size: 24px;
 }
 
-.media{
-    background-color: #FAF408;
-    width: 50%;
-}
-
-.forte{
-    background-color: #00FF85;
-    width: 100%;
-}
-
-
-label{
+label {
     font-size: 20px;
 }
 
-.checkbox{
+.checkbox {
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
 
-.barra{
+.barra {
     background-color: var(--fundo-senha);
     height: 30px;
     width: 100%;
 }
-.forca{
+
+.forca {
     height: 30px;
     position: relative;
     bottom: 30px;
 }
 
-.fraca{
+.fraca {
     width: 25%;
-    background-color: #E71B32; 
+    background-color: #E71B32;
+}
+
+.media {
+    background-color: #FAF408;
+    width: 50%;
+}
+
+.forte {
+    background-color: #00FF85;
+    width: 100%;
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha {
+        flex-direction: row;
+    }
 }
