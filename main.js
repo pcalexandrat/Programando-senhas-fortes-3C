@@ -45,7 +45,6 @@ let senha = '';
     classificaSenha();
 }
 
-
 console.log(botoes)
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
@@ -59,9 +58,11 @@ function diminuiTamanho(){
 }
 function aumentaTamanho(){
     if (tamanhoSenha < 20){
-       tamanhoSenha = tamanhoSenha+1;
+       //tamanhoSenha = tamanhoSenha+1;
+       tamanhoSenha++;
     }
     numeroSenha.textContent = tamanhoSenha;
+    
 }
 
 for (i=0; i < checkbox.length;i++){
@@ -73,26 +74,3 @@ console.log(checkbox[0].checked);
 geraSenha();
 campoSenha.value = letrasMaiusculas;
 
-function diminuiTamanho(){
-    if (tamanhoSenha > 1){
-       // tamanhoSenha = tamanhoSenha-1;
-        tamanhoSenha--;
-    }
-    campoSenha.textContent = tamanhoSenha;
-    geraSenha();
-}
-function aumentaTamanho(){
-    if (tamanhoSenha < 20){
-       // tamanhoSenha = tamanhoSenha+1;
-       tamanhoSenha++;
-    }
-    campoSenha.textContent = tamanhoSenha;
-    geraSenha();
-}
-
-
-
-
-    console.log(alfabeto);
-
-    
