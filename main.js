@@ -11,6 +11,8 @@ const checkbox = document.querySelectorAll('.checkbox');
 const forcaSenha = document.querySelector('.forca');
 
 function classificaSenha(tamanhoAlfabeto){
+    const valorEntropia = document.querySelector('.entropia');
+    valorEntropia.textContent = Math.floor(entropia)/(100e6*60*60*24);
     let entropia = tamanhoSenha * Math.log2(tamanhoSenha);
     console.log(entropia);
     forcaSenha.classList.remove('fraca','media','forte');
@@ -46,7 +48,7 @@ let senha = '';
     classificaSenha(alfabeto.length);
 }
 
-console.log(botoes)
+
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
 
@@ -68,7 +70,6 @@ for (i=0; i < checkbox.length;i++){
 checkbox[i].onclick = geraSenha;
 }
 
-console.log(checkbox[0].checked);
 
 geraSenha();
 campoSenha.value = letrasMaiusculas;
