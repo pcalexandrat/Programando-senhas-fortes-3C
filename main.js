@@ -64,7 +64,7 @@ let senha = '';
 
 function classificaSenha(tamanhoAlfabeto){
     
-    let entropia = tamanhoSenha * Math.log2(tamanhoSenha);
+    let entropia = tamanhoSenha * Math.log2(tamanhoAlfabeto);
     console.log(entropia);
     forcaSenha.classList.remove('fraca','media','forte');
     if (entropia > 57){
